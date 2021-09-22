@@ -129,7 +129,7 @@ class Register extends Component {
     if (this.checkBtn.context._errors.length === 0) {
       this.props
         .dispatch(
-          register(this.state.username, this.state.email, this.state.password)
+          register(this.state.username, this.state.tel, this.state.localisation,this.state.email, this.state.password)
         )
         .then(() => {
           this.setState({
@@ -238,7 +238,7 @@ class Register extends Component {
                     name="tel"
                     value={this.state.tel}
                     onChange={this.onChangeTel}
-                    validations={[required, vusername]}
+                    
                   />
                 </div>
 
@@ -250,7 +250,6 @@ class Register extends Component {
                     name="localisation"
                     value={this.state.localisation}
                     onChange={this.onChangeLocalisation}
-                    validations={[required, vusername]}
                   />
                 </div>
 

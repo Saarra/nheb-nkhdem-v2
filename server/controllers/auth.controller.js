@@ -44,7 +44,7 @@ exports.signup = (req, res) => {
         }
       );
     } else {
-      Role.findOne({ name: "user" }, (err, role) => {
+      Role.findOne({ name: "client" }, (err, role) => {
         if (err) {
           res.status(500).send({ message: err });
           return;
@@ -57,7 +57,7 @@ exports.signup = (req, res) => {
             return;
           }
 
-          res.send({ message: "User was registered successfully!" });
+          res.send({ message: "Client was registered successfully!" });
         });
       });
     }
