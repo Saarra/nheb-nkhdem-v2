@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
 @import "font-awesome";
 
 body {
-  font-family: 'Lateef', cursive !important;
+  font-family: 'Scheherazade', serif !important;
+
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 32px;
+  color: black;
+}
+
+#nhebnkhdem {
+  font-size: 36px;
+  color: palevioletred;
 }
 
 label {

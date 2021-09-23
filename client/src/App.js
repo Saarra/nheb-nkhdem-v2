@@ -21,6 +21,9 @@ import { history } from './helpers/history';
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
 import ContactUs from "./components/layouts/contactus/contactUs";
+import Job from "./components/layouts/jobs/job";
+import Footer from "./components/layouts/footer/footer";
+import Product from "./components/layouts/products/product";
 
 class App extends Component {
   constructor(props) {
@@ -72,76 +75,98 @@ class App extends Component {
 
     return (
       <Router history={history}>
-        <div>
-          <nav className="navbar navbar-expand navbar-dark bg-dark">
-            <Link to={"/"} className="navbar-brand">
-            نحب نخدم 
-            </Link>
-            <div className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link to={"/home"} className="nav-link">
-                الصفحة الرئيسية
-                </Link>
-              </li>
+        <div className="">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <Link to={"/"} className="navbar-brand"  id="nhebnkhdem">
+                نحب نخدم
+              </Link>
+              |
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-              {showModeratorBoard && (
-                <li className="nav-item">
-                  <Link to={"/mod"} className="nav-link">
-                    Moderator Board
-                  </Link>
-                </li>
-              )}
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <Link to={"/home"} className="nav-link">
+                      الصفحة الرئيسية
+                    </Link>
+                    
+                  </li>
+                  
+                  {showModeratorBoard && (
+                    <li className="nav-item">
+                      <Link to={"/mod"} className="nav-link">
+                        Moderator Board
+                      </Link>
+                    </li>
+                  )}
+                  {showAdminBoard && (
+                    <li className="nav-item">
+                      <Link to={"/admin"} className="nav-link">
+                        المشرف
+                      </Link>
+                    </li>
+                  )}
 
-              {showAdminBoard && (
-                <li className="nav-item">
-                  <Link to={"/admin"} className="nav-link">
-                    Admin Board
-                  </Link>
-                </li>
-              )}
+                  {currentUser && (
+                    <li className="nav-item">
+                      <Link to={"/user"} className="nav-link">
+                        الحريف
+                      </Link>
+                    </li>
+                  )}
+                </ul>
 
-              {currentUser && (
-                <li className="nav-item">
-                  <Link to={"/user"} className="nav-link">
-                    User
-                  </Link>
-                </li>
-              )}
+                {currentUser ? (
+                  <div className="navbar-nav ">
+                    
+                      <li className="nav-item">
+                        <Link to={"/products"} className="nav-link">
+                          منتوجات و بضائع
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to={"/emploi"} className="nav-link">
+                          عروض شغل
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                      <Link to={"/profile"} className="nav-link">
+                        {currentUser.username}
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <a href="/login" className="nav-link" onClick={this.logOut}>
+                        تسجيل خروج
+                      </a>
+                    </li>
+                  </div>
+                ) : (
+                  <div className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                      <Link to={"/login"} className="nav-link">
+                        تسجيل الدخول
+                      </Link>
+                    </li>
+
+                    <li className="nav-item">
+                      <Link to={"/register"} className="nav-link">
+                        اشتراك
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to={"/contactus"} className="nav-link">
+                        اتصل بنا
+                      </Link>
+                    </li>
+                  </div>
+                )}
+              </div>
             </div>
-
-            {currentUser ? (
-              <div className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link to={"/profile"} className="nav-link">
-                    {currentUser.username}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <a href="/login" className="nav-link" onClick={this.logOut}>
-                  تسجيل خروج
-                  </a>
-                </li>
-              </div>
-            ) : (
-              <div className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link to={"/login"} className="nav-link">
-                  تسجيل الدخول
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link to={"/register"} className="nav-link">
-                  اشتراك
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to={"/contactus"} className="nav-link">
-                  اتصل بنا
-                  </Link>
-                </li>
-              </div>
-            )}
           </nav>
 
           <div className="">
@@ -153,10 +178,14 @@ class App extends Component {
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
+              <Route path="/emploi" component={Job} />
+              <Route path="/products" component={Product} />
               <Route path="/contactus" component={ContactUs} />
             </Switch>
           </div>
         </div>
+
+        <Footer />
       </Router>
     );
   }

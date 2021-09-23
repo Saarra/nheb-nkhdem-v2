@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../footer/footer';
 import "./contactUs.css"
 
 function ContactUs() {
@@ -49,7 +48,7 @@ function ContactUs() {
         </div>
       </div>
     </section>
-      <Footer/>
+
       </>
     );
 }

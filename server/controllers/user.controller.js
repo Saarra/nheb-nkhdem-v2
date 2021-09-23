@@ -10,23 +10,15 @@ exports.adminBoard = (req, res) => {
   res.status(200).send("Admin Content.");
 };
 
-exports.moderatorBoard = (req, res) => {
-  res.status(200).send("Moderator Content.");
+exports.clientBoard = (req, res) => {
+  res.status(200).send("Client Content.");
 };
 
-
-// exports.clientBoard = (req, res) => {
-//   res.status(200).send("Client Content.");
-// };
-
-
-
+exports.ppBoard = (req, res) => {
+  res.status(200).send("PP Content.");
+};
 
 exports.rhBoard = (req, res) => {
   res.status(200).send("RH Content.");
 };
 
-
-exports.ppBoard = (req, res) => {
-  res.status(200).send("PP Content.");
-};

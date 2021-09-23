@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import Product from './layouts/products/product'
-import UserService from "../services/user.service";
-import Header from "./layouts/header/header";
-import ContactUs from "./layouts/contactus/contactUs";
-import Job from "./layouts/jobs/job";
 
-export default class Home extends Component {
+import UserService from "../services/user.service";
+import EventBus from "../common/EventBus";
+
+export default class BoardAdmin extends Component {
   constructor(props) {
     super(props);
 
@@ -15,7 +13,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    UserService.getPublicContent().then(
+    UserService.getPpBoard().then(
       response => {
         this.setState({
           content: response.data
@@ -24,21 +22,26 @@ export default class Home extends Component {
       error => {
         this.setState({
           content:
-            (error.response && error.response.data) ||
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
             error.message ||
             error.toString()
         });
+
+        if (error.response && error.response.status === 401) {
+          EventBus.dispatch("logout");
+        }
       }
     );
   }
 
   render() {
     return (
-      <div>
-          <Header />
-          <Product />
-          <Job />
-          <ContactUs />
+      <div className="container">
+        <header className="jumbotron">
+          <h3>{this.state.content}</h3>
+        </header>
       </div>
     );
   }
