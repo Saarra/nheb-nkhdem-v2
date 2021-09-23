@@ -4,7 +4,7 @@
   "description": "Node.js + MongoDB: JWT Authentication & Authorization",
   "main": "server.js",
   "scripts": {
-    "dev": "concurrently \"node server.js\" \"cd client && npm start\""
+    "dev": "concurrently \"cd server && npx nodemon server.js\" \"cd client && npm start\""
   },
   "keywords": [
     "node.js",

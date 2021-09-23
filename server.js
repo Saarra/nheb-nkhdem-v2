@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 // const cors = require("cors");
 const dbConfig = require("./server/config/db.config");
+const emploiRoutes = require("./server/routes/emploi.routes")
 
 const app = express();
 
@@ -35,6 +36,9 @@ app.get("/", (req, res) => {
 // routes
 require("./server/routes/auth.routes")(app);
 require("./server/routes/user.routes")(app);
+// require("./server/routes/emploi.routes")(app);
+
+app.use('/api/emploi', emploiRoutes)
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
