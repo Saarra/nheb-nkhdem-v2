@@ -1,8 +1,9 @@
 @import "font-awesome";
+
 .main {
     max-height: 550px;;
     background-color: #a9cdf1;
-    color: white;
+    color: rgb(58, 0, 0);
     font-size: 38pt;
     text-align: center;
     line-height: 550px;
@@ -12,12 +13,12 @@
     bottom: 0;
    }
    .footer-distributed{
-    background-color: #292c2f;
+
     box-shadow: 0 1px 1px 0 rgba(0, 17, 116, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: bold 16px sans-serif;
+    font: bold 42px !important;
     
     padding: 55px 50px;
    }
@@ -34,18 +35,18 @@
    }
     
    .footer-distributed h3{
-    color:  #ffffff;
+    color:  #1b1616;
     font: normal 36px 'Cookie', cursive;
     margin: 0;
    }
     
    .footer-distributed h3 span{
-    color:  #5383d3;
+    color:  #850d3b;
    }
     
     
    .footer-distributed .footer-links{
-    color:  #ffffff;
+    color:  #312c2c;
     margin: 20px 0 12px;
     padding: 0;
    }
@@ -58,7 +59,7 @@
    }
     
    .footer-distributed .footer-company-name{
-    color:  #8f9296;
+    color:  #312c2c;
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -88,8 +89,9 @@
    }
     
    .footer-distributed .footer-center p{
+       font-size: 26px;
     display: inline-block;
-    color: #ffffff;
+    color: #312c2c;
     vertical-align: middle;
     margin:0;
    }
@@ -97,7 +99,7 @@
    .footer-distributed .footer-center p span{
     display:block;
     font-weight: normal;
-    font-size:14px;
+    font-size:24px;
     line-height:2;
    }
     
@@ -113,8 +115,9 @@
    .footer-distributed .footer-company-about{
     line-height: 20px;
     color:  #92999f;
-    font-size: 13px;
+    font-size: 26px;
     font-weight: normal;
+    text-align: justify;
     margin: 0;
    }
     

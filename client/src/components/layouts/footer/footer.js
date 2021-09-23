@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 function Footer() {
     return (
-        <footer className="footer-distributed">
+        <footer className="footer-distributed bg-light">
         <div className="footer-left">
           <h3>نخدم <span>نحب</span></h3>
           <p className="footer-links">
@@ -44,12 +44,12 @@ function Footer() {
             موقع تونسي يهدف الى التعريف بمنتجات أصحاب المشاريع الصغرى و الصناعات اليدوية و ينشر فيه عروض شغل
 
           </p>
-          <div className="footer-icons">
+          {/* <div className="footer-icons">
             <Link to ="#"><i className="fa fa-facebook" /></Link>
             <Link to ="#"><i className="fa fa-instagram" /></Link>
             <Link to ="#"><i className="fa fa-linkedin" /></Link>
             <Link to ="#"><i className="fa fa-youtube" /></Link>
-          </div>
+          </div> */}
         </div>
       </footer>
     )
