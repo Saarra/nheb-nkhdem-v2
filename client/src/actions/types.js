@@ -6,3 +6,9 @@ export const LOGOUT = "LOGOUT";
 
 export const SET_MESSAGE = "SET_MESSAGE";
 export const CLEAR_MESSAGE = "CLEAR_MESSAGE";
+
+// emploi
+export const GET_EMPLOIS = "GET_EMPLOIS"
+
+export const GET_EMPLOI = "GET_EMPLOI"
+
