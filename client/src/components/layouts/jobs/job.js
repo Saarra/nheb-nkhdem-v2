@@ -4,6 +4,7 @@ import JobCard from './JobCard'
 import emploiReducer from '../../../reducers/emploiReducer'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import "./job.css"
 
 import {getEmplois}  from '../../../actions/emploi'
 
@@ -21,17 +22,19 @@ function Job() {
                     <Link to="/emploi">
                         عروض شغل في كامل أنحاء الجمهورية التونسية
                     </Link>
-                    <button className onClick = {() => dispatch(getEmplois())}>
-                    Emplois    
-                    </button>
-
                 </h1>
             </div>
-                <div>
+                <div className="emplois">
                     {
                         emplois.map(emploi => <JobCard emploi={emploi} key={emploi._id} />)
                     }
                 </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <button className="btn btn-light" onClick = {() => dispatch(getEmplois())}>
+                     عروض شغل     
+                    </button>
+                </div>
+
         </div>
     )
 }

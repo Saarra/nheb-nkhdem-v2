@@ -84,3 +84,6 @@ h5 {
 	 color: #fff;
 }
  
+.emplois {
+  display: flex;
+}
