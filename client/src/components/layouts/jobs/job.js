@@ -19,9 +19,7 @@ function Job() {
         <div className="main-container">
             <div className="heading">
                 <h1 className="heading__title">
-                    <Link to="/emploi">
                         عروض شغل في كامل أنحاء الجمهورية التونسية
-                    </Link>
                 </h1>
             </div>
                 <div className="emplois">

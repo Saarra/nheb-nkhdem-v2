@@ -53,24 +53,6 @@ const vpassword = (value) => {
 
 class Register extends Component {
 
-  // ---------------Test 
-  // jQuerycode = () => {
-  //   const signUpButton = document.getElementById("signUp");
-  //   const signInButton = document.getElementById("signIn");
-  //   const container = document.getElementById("container");
-  //   signUpButton.addEventListener("click", () => {
-  //     container.classList.add("right-panel-active");
-  //   });
-
-  //   signInButton.addEventListener("click", () => {
-  //     container.classList.remove("right-panel-active");
-  //   });
-  // };
-
-  // componentDidMount() {
-  //   this.jQuerycode();
-  // }
-
   constructor(props) {
     super(props);
     this.handleRegister = this.handleRegister.bind(this);
@@ -148,60 +130,6 @@ class Register extends Component {
     const { message } = this.props;
 
     return (
-// ------------------------------Test Login Template ---------------------
-      // <>
-      //   <div>
-      //     <div className="container" id="container">
-      //       <div className="form-container sign-up-container">
-      //         <form >
-      //           <h1>انشاء حساب</h1>
-      //           <input type="text" placeholder="اسم" name="name" />
-      //           <input type="email" placeholder="بريد الالكتروني" name="email" />
-      //           <input type="password" placeholder="كلمه السر" name="password" />
-      //           <input type="number" placeholder="رقم الهاتف" name="tel" />
-      //           {/* <select name="role"  id="pet-select">
-      //           <option value="Client"  >حريف</option>
-      //           <option value="PP"  >صاحب مشروع</option>
-      //           <option value="PH"  >موارد بشرية</option>
-      //       </select> */}
-      //           <button type="submit" >سجل الأن</button>
-      //         </form>
-      //       </div>
-      //       <div className="form-container sign-in-container">
-      //           <form >
-      //               <h1>تسجيل الدخول</h1>
-      //               <input type="email" name="email" placeholder="بريد الالكتروني"  />
-      //               <input type="password" name="password" placeholder="كلمه السر"  />
-      //               {/* <a href="#">Forgot your password?</a> */}
-      //               <button type="submit">تسجيل الدخول</button>
-      //           </form>
-      //       </div>
-      //       <div className="overlay-container">
-      //         <div className="overlay">
-      //           <div className="overlay-panel overlay-left">
-      //             <h1>نحب نخدم</h1>
-      //             <img src={img2} alt="" />
-      //             <button className="ghost" id="signIn">
-      //               تسجيل الدخول
-      //             </button>
-      //           </div>
-      //           <div className="overlay-panel overlay-right">
-      //                   <h1> وين أنت تنجم تخدم</h1>
-      //                   <img src={img1} alt="" width="100px" height="100px" />
-      //                   <button className="ghost" id="signUp">
-      //                       حساب جديد
-      //                   </button>
-      //           </div>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </>
-// ---------------------------------------------
-
-
-
-
       <div className="col-md-12">
         <div className="card card-container">
           <img

@@ -1,10 +1,11 @@
 import React from 'react'
-import "./footer.css"
 import {Link} from "react-router-dom"
+import { StyledFooter } from '../../styles/Footer.styled'
 
 
 function Footer() {
     return (
+      <StyledFooter>
         <footer className="footer-distributed bg-light">
         <div className="footer-left">
           <h3>نخدم <span>نحب</span></h3>
@@ -52,6 +53,7 @@ function Footer() {
           </div> */}
         </div>
       </footer>
+    </StyledFooter>
     )
 }
 

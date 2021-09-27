@@ -15,7 +15,7 @@ class Profile extends Component {
 
     return (
       <>
-<aside className="profile-card">
+<div className="profile-card">
 <header>
   {/* here’s the avatar */}
   <a target="_blank" href="#">
@@ -65,7 +65,7 @@ class Profile extends Component {
     </a>
   </li>
 </ul>
-</aside>
+</div>
 </>
     );
   }

@@ -24,6 +24,7 @@ import ContactUs from "./components/layouts/contactus/contactUs";
 import Job from "./components/layouts/jobs/job";
 import Footer from "./components/layouts/footer/footer";
 import Product from "./components/layouts/products/product";
+import Test from "./components/layouts/Test/test";
 
 class App extends Component {
   constructor(props) {
@@ -94,7 +95,6 @@ class App extends Component {
                     <Link to={"/home"} className="nav-link">
                       الصفحة الرئيسية
                     </Link>
-                    
                   </li>
                   
                   {showModeratorBoard && (
@@ -144,6 +144,11 @@ class App extends Component {
                         تسجيل خروج
                       </a>
                     </li>
+                    <li className="nav-item">
+                      <Link to={"/contactus"} className="nav-link">
+                        اتصل بنا
+                      </Link>
+                    </li>
                   </div>
                 ) : (
                   <div className="navbar-nav ml-auto">
@@ -158,11 +163,7 @@ class App extends Component {
                         اشتراك
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link to={"/contactus"} className="nav-link">
-                        اتصل بنا
-                      </Link>
-                    </li>
+             
                   </div>
                 )}
               </div>
@@ -181,12 +182,11 @@ class App extends Component {
               <Route path="/emploi" component={Job} />
               <Route path="/products" component={Product} />
               <Route path="/contactus" component={ContactUs} />
+              <Route path="/test" component={Test} />
             </Switch>
           </div>
-        </div>
-
-        <Footer />
-      </Router>
+        </div>      
+        </Router>
     );
   }
 }

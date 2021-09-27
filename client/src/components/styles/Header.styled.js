@@ -1,4 +1,8 @@
+import styled from 'styled-components'
 
+
+export const StyledHeader = styled.div 
+`
 header {
     text-align: center;
     color: #fff;
@@ -19,8 +23,8 @@ header .intro-text {
 }
 
 h1 {
-    margin-bottom: 50px;
-    font-size: 82px;
+    margin-bottom: 30px;
+    font-size: 122px;
     line-height: 22px;
     color: rgb(255, 238, 241);
 }
@@ -29,7 +33,6 @@ h1 {
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
     font-size: 120px;
     font-weight: 700;
     line-height: 50px;
@@ -37,7 +40,9 @@ header .intro-text .intro-heading {
 
 .desc-site {
     color: blanchedalmond;
-    background-color: crimson;
+    direction:rtl;
+    font-size: 66px;
+    line-height: 1.5;
 }
 
 
@@ -63,3 +68,5 @@ header .intro-text .intro-heading {
         line-height: 75px;
     }
 }
+
+`

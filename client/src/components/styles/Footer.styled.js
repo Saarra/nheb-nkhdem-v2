@@ -1,3 +1,7 @@
+import styled from 'styled-components'
+
+export const StyledFooter = styled.div
+`
 @import "font-awesome";
 
 .main {
@@ -8,18 +12,13 @@
     text-align: center;
     line-height: 550px;
    }
-   footer{
-    position: relative;
-    bottom: 0;
-   }
-   .footer-distributed{
 
+   .footer-distributed {
     box-shadow: 0 1px 1px 0 rgba(0, 17, 116, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     font: bold 42px !important;
-    
     padding: 55px 50px;
    }
     
@@ -36,7 +35,7 @@
     
    .footer-distributed h3{
     color:  #1b1616;
-    font: normal 36px 'Cookie', cursive;
+    /* font: normal 36px 'Cookie', cursive; */
     margin: 0;
    }
     
@@ -176,3 +175,4 @@
     }
     
    }
+`

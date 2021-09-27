@@ -4,6 +4,7 @@ import UserService from "../services/user.service";
 import Header from "./layouts/header/header";
 import ContactUs from "./layouts/contactus/contactUs";
 import Job from "./layouts/jobs/job";
+import Footer from "./layouts/footer/footer";
 
 export default class Home extends Component {
   constructor(props) {
@@ -36,9 +37,10 @@ export default class Home extends Component {
     return (
       <div>
           <Header />
-          <Product />
+          <Product /> 
           <Job />
           <ContactUs />
+          <Footer />
       </div>
     );
   }

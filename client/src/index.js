@@ -5,11 +5,14 @@ import store from "./store";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { StyledApp } from "./components/styles/Global.styled";
 
 ReactDOM.render(
+  <StyledApp>
   <Provider store={store}>
     <App />
-  </Provider>,
+  </Provider>
+  </StyledApp>,
   document.getElementById("root")
 );
 
