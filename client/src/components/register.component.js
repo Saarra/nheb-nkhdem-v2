@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { register } from "../actions/auth";
 import img1 from '../Assets/Good team-pana.svg'
 import img2 from '../Assets/Knitting-pana.svg'
+import { Button } from "./styles/Button.styled";
 
 // import "./register_styles.css";
 
@@ -206,7 +207,7 @@ class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <button className="btn-primary mt-3">اشتراك الأن</button>
+                  <Button className="btn-primary mt-3">اشتراك الأن</Button>
                 </div>
               </div>
             )}

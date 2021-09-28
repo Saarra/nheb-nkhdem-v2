@@ -6,9 +6,9 @@ export const StyledFooter = styled.div
 
 .main {
     max-height: 550px;;
-    background-color: #a9cdf1;
+    background-color: #EE82EE;
     color: rgb(58, 0, 0);
-    font-size: 38pt;
+    font-size: 38px;
     text-align: center;
     line-height: 550px;
    }
@@ -35,16 +35,17 @@ export const StyledFooter = styled.div
     
    .footer-distributed h3{
     color:  #1b1616;
-    /* font: normal 36px 'Cookie', cursive; */
     margin: 0;
+    font-size: 42px;
    }
     
    .footer-distributed h3 span{
-    color:  #850d3b;
+    color:  #EE82EE;
    }
     
     
    .footer-distributed .footer-links{
+    font-size: 32px;
     color:  #312c2c;
     margin: 20px 0 12px;
     padding: 0;
@@ -59,7 +60,7 @@ export const StyledFooter = styled.div
     
    .footer-distributed .footer-company-name{
     color:  #312c2c;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: normal;
     margin: 0;
    }
@@ -70,7 +71,7 @@ export const StyledFooter = styled.div
    }
     
    .footer-distributed .footer-center i{
-    background-color:  #33383b;
+    background-color:  #EE82EE;
     color: #ffffff;
     font-size: 25px;
     width: 38px;
@@ -103,8 +104,8 @@ export const StyledFooter = styled.div
    }
     
    .footer-distributed .footer-center p a{
-    color:  #5383d3;
-    text-decoration: none;;
+    color:  #000;
+    text-decoration: none;
    }
     
    .footer-distributed .footer-right{
@@ -112,8 +113,9 @@ export const StyledFooter = styled.div
    }
     
    .footer-distributed .footer-company-about{
-    line-height: 20px;
-    color:  #92999f;
+    direction: rtl;
+    line-height: 30px;
+    color:  #000;
     font-size: 26px;
     font-weight: normal;
     text-align: justify;
@@ -137,7 +139,7 @@ export const StyledFooter = styled.div
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-color:  #33383b;
+    background-color:  #EE82EE;
     border-radius: 2px;
     
     font-size: 20px;

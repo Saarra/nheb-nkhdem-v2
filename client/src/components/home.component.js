@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Product from './layouts/products/product'
 import UserService from "../services/user.service";
 import Header from "./layouts/header/header";
 import ContactUs from "./layouts/contactus/contactUs";
 import Job from "./layouts/jobs/job";
 import Footer from "./layouts/footer/footer";
+import Product from "./layouts/products/product";
 
 export default class Home extends Component {
   constructor(props) {

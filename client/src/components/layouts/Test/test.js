@@ -1,10 +1,15 @@
 import React from 'react'
+import { StyledEmploi } from '../../styles/Emploi.styled'
+import RH_emplois from '../rh_emplois/rh_emplois'
+import "./test.css"
 
 function Test() {
     return (
-        <div>
-            <h1>Test Componenet</h1>
-        </div>
+      <>
+      <StyledEmploi>
+      <RH_emplois />
+      </StyledEmploi>
+      </>
     )
 }
 

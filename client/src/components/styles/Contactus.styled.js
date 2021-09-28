@@ -57,7 +57,7 @@ form {
 }
 form .title {
     font-family: 'Pacifico', cursive;
-    color: #212529;
+    color: #DA70D6;
     font-size: 2.5rem;
 }
 form .form-control {

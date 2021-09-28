@@ -8,6 +8,7 @@ import CheckButton from "react-validation/build/button";
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
 import img2 from '../Assets/Knitting-pana.svg'
+import { Button } from "./styles/Button.styled";
 
 const required = (value) => {
   if (!value) {
@@ -121,7 +122,7 @@ class Login extends Component {
             </div>
 
             <div className="form-group">
-              <button
+              <Button
                 className="btn btn-primary btn-block"
                 disabled={this.state.loading}
               >
@@ -129,7 +130,7 @@ class Login extends Component {
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
                 <span>Login</span>
-              </button>
+              </Button>
             </div>
 
             {message && (

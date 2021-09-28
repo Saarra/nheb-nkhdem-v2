@@ -4,7 +4,7 @@ import UserService from "../services/user.service";
 import EventBus from "../common/EventBus";
 import RH_emplois from "./layouts/rh_emplois/rh_emplois";
 
-export default class BoardAdmin extends Component {
+export default class BoardRH extends Component {
   constructor(props) {
     super(props);
 

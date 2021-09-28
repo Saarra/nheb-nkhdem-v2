@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import { StyledFooter } from '../../styles/Footer.styled'
+import SocialIcons from './SocialIcons'
 
 
 function Footer() {
@@ -45,12 +46,7 @@ function Footer() {
             موقع تونسي يهدف الى التعريف بمنتجات أصحاب المشاريع الصغرى و الصناعات اليدوية و ينشر فيه عروض شغل
 
           </p>
-          {/* <div className="footer-icons">
-            <Link to ="#"><i className="fa fa-facebook" /></Link>
-            <Link to ="#"><i className="fa fa-instagram" /></Link>
-            <Link to ="#"><i className="fa fa-linkedin" /></Link>
-            <Link to ="#"><i className="fa fa-youtube" /></Link>
-          </div> */}
+          <SocialIcons />
         </div>
       </footer>
     </StyledFooter>

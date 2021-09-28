@@ -25,6 +25,12 @@ import Job from "./components/layouts/jobs/job";
 import Footer from "./components/layouts/footer/footer";
 import Product from "./components/layouts/products/product";
 import Test from "./components/layouts/Test/test";
+//icons 
+import { HiOutlineLogout } from "react-icons/hi";
+import { FiMessageCircle, FiUserCheck, FiUser } from "react-icons/fi";
+import { NavBar } from "./components/styles/NavBar.styled";
+import BoardRH from "./components/board-rh.component";
+import Add_emploi from "./components/layouts/rh_emplois/add_emploi";
 
 class App extends Component {
   constructor(props) {
@@ -50,6 +56,8 @@ class App extends Component {
         currentUser: user,
         showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
         showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+        showRHBoard: user.roles.includes("ROLE_RH"),
+        showPPBoard: user.roles.includes("ROLE_PP"),
       });
     }
 
@@ -67,16 +75,18 @@ class App extends Component {
     this.setState({
       showModeratorBoard: false,
       showAdminBoard: false,
+      showRHBoard: false,
+      showPPBoard: false,
       currentUser: undefined,
     });
   }
 
   render() {
-    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
+    const { currentUser, showModeratorBoard, showAdminBoard, showRHBoard, showPPBoard } = this.state;
 
     return (
       <Router history={history}>
-        <div className="">
+        <NavBar>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <Link to={"/"} className="navbar-brand"  id="nhebnkhdem">
@@ -111,14 +121,29 @@ class App extends Component {
                       </Link>
                     </li>
                   )}
+                  {showRHBoard && (
+                    <li className="nav-item">
+                      <Link to={"/rh"} className="nav-link">
+                        موارد بشرية
+                      </Link>
+                    </li>
+                  )}
+                  {showPPBoard && (
+                    <li className="nav-item">
+                      <Link to={"/pp"} className="nav-link">
+                        صاحب مشروع
+                      </Link>
+                    </li>
+                  )}
 
-                  {currentUser && (
+                  {/* {currentUser && (
                     <li className="nav-item">
                       <Link to={"/user"} className="nav-link">
                         الحريف
                       </Link>
+                      <FiUserCheck />
                     </li>
-                  )}
+                  )} */}
                 </ul>
 
                 {currentUser ? (
@@ -138,16 +163,18 @@ class App extends Component {
                       <Link to={"/profile"} className="nav-link">
                         {currentUser.username}
                       </Link>
+                      <FiUser />
                     </li>
                     <li className="nav-item">
                       <a href="/login" className="nav-link" onClick={this.logOut}>
-                        تسجيل خروج
+                      تسجيل خروج
                       </a>
-                    </li>
+                      <HiOutlineLogout />                     </li>
                     <li className="nav-item">
                       <Link to={"/contactus"} className="nav-link">
                         اتصل بنا
                       </Link>
+                      <FiMessageCircle />
                     </li>
                   </div>
                 ) : (
@@ -178,14 +205,18 @@ class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
+              <Route path="/rh" component={BoardRH} />
               <Route path="/admin" component={BoardAdmin} />
               <Route path="/emploi" component={Job} />
               <Route path="/products" component={Product} />
               <Route path="/contactus" component={ContactUs} />
               <Route path="/test" component={Test} />
+              <Route path="/addEmploi" component={Add_emploi} />
+              
+
             </Switch>
           </div>
-        </div>      
+        </NavBar>      
         </Router>
     );
   }
