@@ -1,7 +1,21 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { StyledContactus } from '../../styles/Contactus.styled';
+import { addsugg } from '../../../actions/contactus';
 
 function ContactUs() {
+
+      // //state 
+      // const [newcontactus, setNewcontactus] = useState({ name: "", email: "", msg: ""})
+      // // dispatch 
+      // const dispatch = useDispatch()
+  
+      //     //handelChange 
+      //     const handleChange = (e) => {
+      //       setNewcontactus({...newcontactus, [e.target.name]: e.target.value})
+      //     }
+      
     return (
      <StyledContactus >
       <div className="container d-flex justify-content-center align-items-center">
@@ -312,7 +326,12 @@ function ContactUs() {
             <label htmlFor="formName" className="d-block">
               {/* <i className="icon" data-feather="user" /> */}
             </label>
-            <input type="text" id="formName" className="form-control form-control-lg thick" placeholder="الاسم" />
+            <input type="text" id="formName" className="form-control form-control-lg thick" 
+            placeholder="الاسم" 
+            name="name"
+            // value={contactus.name}
+            // onChange={handleChange}
+            />
           </div>
           <br />
           {/* E-mail */}
@@ -320,18 +339,28 @@ function ContactUs() {
             <label htmlFor="formEmail" className="d-block">
               <i className="icon" data-feather="mail" />
             </label>
-            <input type="email" id="formEmail" className="form-control form-control-lg thick" placeholder="البريد الاكتروني" />
+            <input type="email" id="formEmail" className="form-control form-control-lg thick" placeholder="البريد الاكتروني" 
+                       name="email"
+                      //  value={contactus.email}
+                      //   onChange={handleChange}
+            />
           </div>
           <br />
           {/* Message */}
           <div className="form-group message">
             <textarea id="formMessage" className="form-control form-control-lg" rows={7} 
-            placeholder="الرسالة" defaultValue={""} />
+            placeholder="الرسالة" 
+            name="msg"
+            // value={contactus.msg}
+            // onChange={handleChange}
+            />
           </div>
           <br />
           {/* Submit btn */}
           <div className="text-center">
-            <button type="submit" className="btn btn-primary" tabIndex={-1}>إرسال</button>
+            <button type="submit" className="btn btn-primary" tabIndex={-1}
+
+            >إرسال</button>
           </div>
         </form>
       </div>

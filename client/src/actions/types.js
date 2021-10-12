@@ -17,3 +17,6 @@ export const GET_PRODUCT = "GET_PRODUCT"
 
 export const TOGGLE_TRUE="TOGGLE_TRUE"
 export const TOGGLE_FALSE="TOGGLE_FALSE"
+
+
+export const GET_SUGG = "GET_SUGG"

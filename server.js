@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const cors = require("cors");
 const dbConfig = require("./server/config/db.config");
 const emploiRoutes = require("./server/routes/emploi.routes")
 const productRoutes = require("./server/routes/product.routes")
+const contactusRoutes = require("./server/routes/contactus.routes")
 const app = express();
 
 app.use(bodyParser.json());
@@ -41,6 +41,8 @@ require("./server/routes/user.routes")(app);
 app.use('/api/emploi', emploiRoutes)
 
 app.use('/api/product',productRoutes)
+
+app.use('/api/contactus', contactusRoutes)
 
 
 // set port, listen for requests

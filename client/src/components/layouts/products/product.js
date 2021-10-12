@@ -24,7 +24,7 @@ function Product() {
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <Button className="btn btn-light" onClick={() => dispatch(getProducts())}>
-                        all products
+                        جميع المنتوجات
                     </Button>
                 </div>
 
